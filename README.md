@@ -1,6 +1,8 @@
 # Quarkus Unique Bytes Generator PostgreSQL Library
 
-`quarkus-unique-bytes-generator-postgresql-lib` provides a CDI-managed implementation of `UniqueBytesGenerator` for Quarkus applications. It combines PostgreSQL-backed 64-bit prefixes with locally generated counters and format-preserving obfuscation to produce unique byte arrays with a configurable length from 12 to 255 bytes.
+`quarkus-unique-bytes-generator-postgresql-lib` provides a CDI-managed implementation of `UniqueBytesGenerator` for
+Quarkus applications. It combines PostgreSQL-backed 64-bit prefixes with locally generated counters and
+format-preserving obfuscation to produce unique byte arrays with a configurable length from 12 to 255 bytes.
 
 ## What the library does
 
@@ -15,7 +17,7 @@ Add the library to your application:
 
 ```kotlin
 dependencies {
-  implementation("ru.code4a:quarkus-unique-bytes-generator-postgresql-lib:<version>")
+  implementation("ru.code4a:quarkus-unique-bytes-generator-postgresql:<version>")
 }
 ```
 
@@ -23,7 +25,8 @@ dependencies {
 
 - A Quarkus application
 - A PostgreSQL sequence that returns unique `BIGINT` values
-- Configuration for `ru.code4a:quarkus-crypto`, because this library uses `FormatPreservingEncrypterContextual` internally
+- Configuration for `ru.code4a:quarkus-crypto`, because this library uses `FormatPreservingEncrypterContextual`
+  internally
 
 Create the default PostgreSQL sequence:
 
